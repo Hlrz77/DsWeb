@@ -1,0 +1,26 @@
+<html>
+  <head>  
+    <title> Meu site </title>    
+  </head>        
+  <body>        
+    <h1>Titulo usando h1</h1>
+    <p>paragrafo conteudo tag h1</p>
+    <br/> 
+    <h2>Titulo usando h2</h2>
+    <p>paragrafo conteudo tag h2</p> 
+    <br/>
+    <h3>Titulo usando h3</h3> 
+    <p>paragrafo conteudo tag h3</p> 
+    <br/>        <h4>Titulo usando h4</h4>
+    <p>paragrafo conteudo tag h4</p> 
+    <br/>     
+    <h5>Titulo usando h5</h5>  
+    <p>paragrafo conteudo tag h5</p>   
+    <br/> 
+    <h6>Titulo usando h6</h6>  
+    <p>paragrafo conteudo tag h6</p>      
+    <br/>
+        <a href="https://google.com" target="_blank">Vai para o google</a>        
+      <img src="foto1.jfif"/>   
+  </body>
+</html>
