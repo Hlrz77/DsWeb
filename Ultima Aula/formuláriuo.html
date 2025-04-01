@@ -17,22 +17,71 @@
     <main>
         <h1>Formulário</h1>
         <form>
+        <div>
             <label for="txt-nome">Nome:</label>
             <input type="text" />
+        </div>
 
+        <div>
             <label for="dt-matricula">Data Matricula</label>
             <input type="date" id="dt-matricula" />
+        </div>
 
+
+        <div>  
             <label for="number">Quantidade:</label>
             <input type="number" />
+        </div>
 
+
+        <div>
             <label for="checkbox">Deseja Receber Emails?</label>
             <input type="checkbox" />
+        </div>
 
-            <label for="radio">Turma</label>
-            <input type="radio" />
 
-            <input type="button">
+        <div> <label for="rb-turma">Turma</label>
+
+            <label for="radio">A</label>
+            <input type="radio" id="rb-turma-a" name="rb-turma"/>
+
+
+            <label for="radio">B</label>
+            <input type="radio" id="rb-turma-b" name="rb-turma"/>
+
+
+            <label for="radio">C</label>
+            <input type="radio" id="rb-turma-c" name="rb-turma"/>
+        </div>
+
+
+        <div>  <label for="rb-tamanho">Tamanho</label>
+
+            <label for="radio">P</label>
+            <input type="radio" id="rb-tamanho-p" name="rb-tamanho"/>
+
+
+            <label for="radio">M</label>
+            <input type="radio" id="rb-tamanho-m" name="rb-tamanho"/>
+
+
+            <label for="radio">G</label>
+            <input type="radio" id="rb-tamanho-g" name="rb-tamanho"/>
+        </div>
+        <div>
+            <select>
+                <label for="sl-uf">Turno:</label>
+                <select id="sl-uf">
+                    <option value="">Manhã</option>
+                    <option value="">Tarde</option>
+                    <option value="">Noite</option>
+                </select>
+        </div>
+
+        <div>
+            <input type="button" value="Salvar">
+        </div>
+
         </form>
     </main>
 </body>
