@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula css</title>
+    <style>
+        /*ESTILO DA PAGINA*/
+        a{
+            text-decoration: 0;
+            color:brown
+        }
+        p{
+            color: rgb(255, 0, 0);
+            border: solid 2px rgb(0, 0, 0);
+        }
+        .fundo-verde{
+            background-color: rgb(22, 209, 22);
+        }
+        .texto-verde{
+            background-color: greenyellow;
+        }
+        .texto-azul{
+            color: rgb(38, 0, 255);
+        }
+        h2{
+            color: purple;
+            background-color: yellow;
+        }
+        div{
+            background-color: gainsboro;
+        }
+        div > h2{
+            background-color: gainsboro;
+        }
+        div > p{
+            border: 0;
+        }
+        main{
+            color: aquamarine;
+            background-color: aqua;
+        }
+        main > h2{
+            background-color: aquamarine;
+            color: blueviolet;
+        }
+        #parag-main-123{
+            background-color: cadetblue;
+        }
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 200px;
+            margin-top: 20px;
+        }
+        header{
+            background-color: blue;
+        }
+        header > nav > a{
+            text-decoration: none;
+            color: white;
+        }
+        header > nav > a:hover{
+            text-decoration: underline;
+            color: rgb(255, 0, 170);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+    <a href="/aula-css.html">Teste link</a>
+        </nav>
+    </header>
+    <H1>Titulo 1</H1>
+    <p> paragrafo 1 </p>
+
+    <H2 class="cor-titulo-2">Titulo 2</H2>
+    <p class="fundo-verde texto-azul"> paragrafo 2 </p>
+
+    <h3>Titulo 3</H3>
+    <p class="fundo-verde"> paragrafo 3 </p>
+
+    <div>
+        <h2> Div Titulo</h2>
+        <p>Texto da teste 123</p>
+    </div>
+
+    <main>
+        <h2> Main Titulo</h2>
+        <p id="paragr-main-123"> Main Texto da teste 123</p>
+    </main>
+
+
+</body>
+</html>
