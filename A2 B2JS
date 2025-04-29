@@ -1,0 +1,52 @@
+var nomeVariavel="Olá Mundo";
+console.log(nomeVariavel);
+console.log(typeof(nomeVariavel));
+
+nomeVariavel = 9;
+console.log(nomeVariavel);
+console.log(typeof(nomeVariavel));
+
+/*
+COMENTARIO...
+
+CRIAR 3 VARIAVEIS
+Armazenar nome do aluno
+Nota do 1 bim
+Nota do 2 bim
+Carregar valores e mostrar no console
+*/
+
+
+var nomeDoAluno="Carlos Daniel";
+var notaBim1="9.5";
+var notaBim2="7.0";
+var mediaNotas= (notaBim1 + notaBim2) / 2;
+
+console.log("Nome:", nomeDoAluno);
+console.log("Nota Bim1:",notaBim1);
+console.log("Nota Bim2:", notaBim2);
+console.log("Média:", mediaNotas);
+
+console.log("Tipo Nome:",typeof(nomeDoAluno));
+console.log("Tipo Nota Bim1:",typeof(notaBim1));
+console.log("Tipo Nota Bim2:",typeof(notaBim2));
+
+/*
+
+OPERADORES:
+
+= ATRIBUIÇÃO
++ SOMA
+- SUBTRAÇÃO
+* MULTIPLICAÇÃO
+/ DIVISÃO
+% (MOD) RESTO DA DIVISÃO
+
+*/
+
+/*
+CRIAR UMA VARIAVEL MEDIA DO SEMESTRE
+NOTA 1BIM + NOTA 2BIM / 2
+*/
+
+
