@@ -18,8 +18,8 @@ Carregar valores e mostrar no console
 
 
 var nomeDoAluno="Carlos Daniel";
-var notaBim1="9.5";
-var notaBim2="7.0";
+var notaBim1=9.5;
+var notaBim2=7.0;
 var mediaNotas= (notaBim1 + notaBim2) / 2;
 
 console.log("Nome:", nomeDoAluno);
