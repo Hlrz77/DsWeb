@@ -1,0 +1,39 @@
+/*declaracao de variaveis*/
+var nomeDoAluno="Carlos Daniel";
+var notaBim1=0;
+var notaBim2=0;
+
+/*solicitar carregar valores*/
+nomeDoAluno = prompt("Informe nome do aluno:");
+notaBim1 = Number(prompt("Informe nota 1bim:"));
+notaBim2 = Number(prompt("Informe nota 2bim:"));
+
+
+/*regras - calculo*/
+var somaNotas= notaBim1 + notaBim2
+var mediaNotas = somaNotas / 2
+
+
+/*mostrar valores*/
+console.log("Nome:" + nomeDoAluno);
+console.log("Nota Bim1:" + notaBim1);
+console.log("Nota Bim2:" + notaBim2);
+console.log("Média:" + mediaNotas);
+
+console.log("Tipo Nome:",typeof(nomeDoAluno));
+console.log("Tipo Nota Bim1:",typeof(notaBim1));
+console.log("Tipo Nota Bim2:",typeof(notaBim2));
+"A media do aluno para as notas X e Y é Z"
+/*
+
+OPERADORES:
+
+= ATRIBUIÇÃO
++ SOMA
+- SUBTRAÇÃO
+* MULTIPLICAÇÃO
+/ DIVISÃO
+% (MOD) RESTO DA DIVISÃO
+
+*/
+
