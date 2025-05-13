@@ -1,0 +1,106 @@
+/*
+
+    function Nome(){
+    codigo...
+    }
+
+function RecebeValores(nomeUsuario){
+    console.log(nomeUsuario);
+}
+
+*/
+
+function RecebeValores(nomeAluno, turmaAluno){
+    "O aluno *** é da turma ***"
+console.log(`O aluno ${nomeAluno} é da turma ${turmaAluno}`);
+}
+
+
+function SomarNumeros(numero1, numero2){
+const resultado = numero1 + numero2;
+console.log(`A soma do número ${numero1} mais o número ${numero2} é igual á ${resultado}`);
+return resultado;
+}
+
+function Calcular(){
+    let n1=0;
+    let n2=0;
+
+    n1 = Number(prompt("Informe o primeiro número:"));
+    n2 = Number(prompt("Informe o primeiro número:"));
+
+    let resultado = SomarNumeros(n1, n2);
+}
+
+function SomarNumeros(n1, n2){
+    const resultado = numero1 + numero2;
+    return resultado;
+    }
+    
+function SubtrairNumeros(n1, n2){
+    const resultado = numero1 - numero2;
+    return resultado;
+    }
+
+function MultiplicarNumeros(n1, n2){
+    const resultado = numero1 * numero2;
+    return resultado;
+    }
+
+    function DividirNumeros(n1, n2){
+    const resultado = numero1 / numero2;
+    return resultado;
+    }
+
+    function RetornarMedia(n1, n2){
+        const soma = SomarNumeros(n1, n2);
+        const media = DividirNumeros(soma, 2);
+        return media;
+    }
+
+    function Calcular(){
+        const v1 = Number(prompt("v1:"));
+        const v2 = Number(prompt("v2:"));
+    
+        const resultado = SomarNumeros(v1, v2);
+        const media = DividirNumeros(resultado, 2);
+        console.log(`${v1} ${numero2} : ${resultado}`);
+
+        
+    }
+
+    function VerificarTextoVazio(){
+        const texto = prompt("Digite algo:")
+        if(texto == ""){
+            console.log("Vazio, informe texto.")
+        }
+        else{
+            console.log(texto);
+        }
+    }
+
+    function VefiricarSeNumero(){
+        const texto = prompt("Digite algo:")
+        if(isNaN(texto) == false){
+            console.log("É um número");
+        }
+
+    }
+
+    function Vefiricar1a10(){
+        const texto = prompt("Digite algo:")
+        if(isNaN(texto) == true){
+            console.log("É um número");
+        }
+        else{
+            const numero = Number(texto);
+            if( (numero >=1) && (numero<=10)){
+            console.log("Esta entre 1-10");
+            }
+        }
+        else{
+            ("Não está entre 1-10");
+            console.log("Não é um número");
+            }
+        }
+    
