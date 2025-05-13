@@ -1,0 +1,40 @@
+/*
+
+OPERADORES:
+
+= ATRIBUIÇÃO
++ SOMA
+- SUBTRAÇÃO
+* MULTIPLICAÇÃO
+/ DIVISÃO
+% (MOD) RESTO DA DIVISÃO
+! NEGAÇÃO
+
+condicionais
+
+if (condicao){
+    verdadeiro
+}
+else {
+    condicao falsa
+}
+
+isNaN : Retorna se valor não é um número
+      : is Not a Number
+
+=== compara se valor e o tipo igual
+
+== compara valor igual
+
+!= diferente(não é igual)
+
+> maior
+
+< menor
+
+&& e
+
+|| ou
+
+*/
+
