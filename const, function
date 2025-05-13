@@ -1,0 +1,26 @@
+
+function Somar(n1, n2){
+    const resultado = numero1 + numero2;
+    console.log(`A soma do número ${numero1} mais o número ${numero2} é igual á ${resultado}`);
+    return resultado;
+    }
+    
+function Subtrair(n1, n2){
+    const resultado = numero1 + numero2;
+    console.log(`A soma do número ${numero1} mais o número ${numero2} é igual á ${resultado}`);
+    return resultado;
+    }
+
+function Multiplicar(n1, n2){
+    const resultado = numero1 + numero2;
+    console.log(`A soma do número ${numero1} mais o número ${numero2} é igual á ${resultado}`);
+    return resultado;
+    }
+
+    function Calcular(){
+        const v1 = Number(prompt("v1:"));
+        const v2 = Number(prompt("v2:"));
+    
+        const resultado = Somar(v1, v2);
+        console.log(`${v1}  ${numero2} = ${resultado}`);
+    }
