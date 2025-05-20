@@ -1,3 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <label for="txtNomeAluno">Nome do Aluno:</label>
+        <input type="text" id="txtNomeAluno">
+    </div>
+    <div>
+        <label for="nbrNota1">Nota 1:</label>
+        <input type="number" id="nbrNota1">
+    </div>
+    <div>
+        <label for="nbrNota1">Nota 2:</label>
+        <input type="number" id="nbrNota1">
+    </div>
+    <div>
+        <input type="button" value="Calcular Média" ondblclick="CalcularNota()">
+    </div>
+    <div onclick="alert"></div>
+
+    <thead border="1">
+        <tbody>
+        <tr>
+            <td>Aluno</td>
+            <td>Média</td>
+            <td>Situação</td>
+        </tr>
+        </tbody>
+    </thead>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
+--------------------------------------------------------------------------
 function CalcularNota(){
     const inputNome = document.querySelector("#txtNomeAluno")
     const inputNota1 = document.querySelector("#nbrNota1")
