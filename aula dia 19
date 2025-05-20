@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário JS</title>
+</head>
+<body>
+    <div  onclick="ExibirMensagem(``)">...</div>
+
+    </div>
+    <form>
+        <div>
+        <label for="txtNomeAluno">Nome Aluno:</label>
+        <input type="text" id="txtNomeAluno">
+        </div>
+        <div>
+        <label for="txtCurso">Nome do Curso:</label>
+        <input type="text" id="txtCurso">
+        </div>
+        <input type="button" value="Salvar" onclick="Salvar()" />
+
+    </form>
+        
+
+    <script src="formulário.js"></script>
+</body>
+</html>
+-------------------------------------------------------------------------------
+function Salvar(){
+const inputNome = document.querySelector("#txtNomeAluno")
+const inputCurso = document.querySelector("#txtCurso")
+
+if(inputNome.value == ""){
+ExibirMensagem("Preencha o campo nome aluno");
+    inputNome.focus();
+    return;
+}
+if(inputCurso.value == ""){
+ExibirMensagem("Preencha o campo nome do curso");
+    inputCurso.focus();
+    return;
+}
+ExibirMensagem("Salvo com sucesso")
+}
+
+()=>{
+    
+}
+
+
+function ExibirMensagem(msg){
+    const div = document.querySelector("#mensagem");
+    div.innerHTML = msg;
+
+    window.setTimeout(()=>{div.innerHTML=""}, 2000);
+}
