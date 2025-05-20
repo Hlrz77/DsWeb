@@ -1,0 +1,34 @@
+function CalcularNota(){
+    const inputNome = document.querySelector("#txtNomeAluno")
+    const inputNota1 = document.querySelector("#nbrNota1")
+    const inputNota2 = document.querySelector("#nbrNota2")
+    const inputResultado = document.querySelector("#Resultado")
+    
+}
+
+if(Nome.value == ""){
+    alert("Preencha o campo Nome do Aluno");
+    inputNome.focus();
+    {return false;}
+}
+if(Nota1.value == ""){
+    alert("Preencha o campo Nota 1");
+    inputNome.focus();
+    {return false;}
+}
+if(Nota2.value == ""){
+    alert("Preencha o campo Nota 2");
+    inputNome.focus();
+    {return false;}
+    
+    return true;
+}
+
+function CalcularMedia(){
+    let n1=0;
+    let n2=0;
+    let somaNotas = n1 + n2;
+    let mediaMedia = somaNotas / 2;
+}
+
+document htmlTable = `<tr><td>${inputNome.value}`
