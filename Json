@@ -1,0 +1,35 @@
+function Salvar(){
+
+const nome = prompt("Nome");
+const nota1bimtxt = prompt("Nota1");
+const nota2bimtxt = prompt("Nota2");
+const turma = prompt("turma");
+const periodo = prompt("periodo");
+
+//VALIDAÇÃO
+//TRATAMENTO DE DADOS
+const nota1 = Number (nota1bimtxt);
+const nota2 = Number (nota2bimtxt);
+const somarnotas = (nota1+nota2);
+const media = (somarnotas / 2);
+
+let aluno = {
+    "Nome": nome,
+    "Nota1bim": nota1bimtxt,
+    "Nota2bim": nota2bimtxt,
+    "Turma": turma,
+    "Periodo": periodo,
+    "Aprovado": true,
+    "Média": media
+};
+
+console.log(aluno);
+
+/*
+CRIAR ATRIBUTOS PARA ARMAZENAR
+TURMA, PERIODO E MÉDIA
+MOSTRAR NA TELA ESSAS INFORMAÇÕES
+*/
+
+
+}
