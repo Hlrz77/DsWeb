@@ -1,0 +1,164 @@
+html
+-------------------------
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+</head>
+<body>
+    
+    <input type="button" value="Salvar" onclick="Salvar()">
+
+    <input type="button" value="Carregar" onclick="BuscarAlunos()">
+
+    <input type="button" value="Buscar Cep" onclick="BuscarCep()">
+
+    <script src="/index.js"></script>
+</body>
+</html>
+----------------------------------------------------------------------------------------
+
+js
+--------------
+function Salvar(){
+
+const nome = prompt("Nome");
+const nota1bimtxt = prompt("Nota1");
+const nota2bimtxt = prompt("Nota2");
+const turma = prompt("turma");
+const periodo = prompt("periodo");
+
+//VALIDAÇÃO
+//TRATAMENTO DE DADOS
+const nota1 = Number (nota1bimtxt);
+const nota2 = Number (nota2bimtxt);
+const somarnotas = (nota1+nota2);
+const media = (somarnotas / 2);
+
+let aluno = {
+    "Nome": nome,
+    "Nota1bim": nota1bimtxt,
+    "Nota2bim": nota2bimtxt,
+    "Turma": turma,
+    "Periodo": periodo,
+    "Aprovado": true,
+    "Média": media
+};
+
+console.log(aluno);
+
+/*
+CRIAR ATRIBUTOS PARA ARMAZENAR
+TURMA, PERIODO E MÉDIA
+MOSTRAR NA TELA ESSAS INFORMAÇÕES
+*/
+
+
+}
+
+
+function BuscarAlunos(){
+    axios.get('/alunos.json')
+  .then(function (response) {
+        // manipula o sucesso da requisição
+         //console.log(response.data[i]);
+        const alunos = response.data;
+        
+        //FOR (INICIO; CONDICAO; INCREMENTO)
+        for(let i = 0;i<response.data.length;i++){
+            console.log(alunos[i].nome);
+         }   
+
+         //forEach (PARA CADA ITEM DE "ALUNOS" FAÇA ISSO)
+        console.log("--forEach");
+         alunos.forEach(aluno => {
+            console.log(aluno.nome);
+            CO
+         });
+           
+            
+
+            
+        /*
+        MOSTAR NOME DO ALUNO E A MÉDIA
+        */
+  })
+  .catch(function (error) {
+        // manipula erros da requisição
+         console.error(error);
+  });
+}
+
+function BuscarCep(){
+const CEP = prompt("CEP:");
+    //https://brasilapi.com.br/api/cep/v2/{cep}
+
+     axios.get(`https://brasilapi.com.br/api/cep/v2/${CEP}`)
+  .then(function (response) {
+            console.log(response.data);
+         
+  })
+  .catch(function (error) {
+         console.error(error);
+  })
+}
+-----------------------------------------------------------------------------
+
+json
+---------------
+[
+{
+    "nome": "Carlos",
+    "nota1bim": 7.5,
+    "nota2bim": 8,
+    "turma": "B",
+    "periodo": 6,
+    "aprovado": true
+},
+{
+    "nome": "João",
+    "nota1bim": 5,
+    "nota2bim": 10,
+    "turma": "A",
+    "periodo": 1,
+    "aprovado": true
+},
+{
+    "nome": "Maria",
+    "nota1bim": 6.5,
+    "nota2bim": 10,
+    "turma": "C",
+    "periodo": 9,
+    "aprovado": true
+},
+{
+    "nome": "Fernanda",
+    "nota1bim": 7,
+    "nota2bim": 3.7,
+    "turma": "A",
+    "periodo": 4,
+    "aprovado": true
+},
+{
+    "nome": "José",
+    "nota1bim": 9.7,
+    "nota2bim": 5,
+    "turma": "C",
+    "periodo": 6,
+    "aprovado": true
+},
+{
+    "nome": "Kauane",
+    "nota1bim": 6.7,
+    "nota2bim": 9.8,
+    "turma": "B",
+    "periodo": 3,
+    "aprovado": true
+}
+]
