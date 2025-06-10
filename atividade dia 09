@@ -1,0 +1,155 @@
+html
+--------------------
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+</head>
+<body>
+    
+    <input type="button" value="Salvar" onclick="Salvar()">
+
+    <input type="button" value="Carregar" onclick="BuscarAlunos()">
+
+    
+    <div>
+        <label for="Cep">Cep:</label>
+        <input type="number">
+    </div>
+    
+    <div>
+        <label for="Rua">Rua:</label>
+        <input type="text">
+    </div>
+    
+    <div>
+        <label for="Numero">Numero:</label>
+        <input type="text">
+    </div>
+    
+    <div>
+        <label for="Bairro">Bairro:</label>
+        <input type="text">
+    </div>
+    
+    <div>
+        <label for="Cidade">Cidade:</label>
+        <input type="text">
+    </div>
+    
+    <div>
+        <label for="UF">UF:</label>
+        <input type="text">
+    </div>
+    
+    <input type="button" value="Buscar Cep" onclick="BuscarCep()">
+
+    <script src=""></script>
+
+    <script src="/index.js"></script>
+</body>
+</html>
+----------------------------------------------------------------------------
+js
+---------------
+function Salvar(){
+
+const nome = prompt("Nome");
+const nota1bimtxt = prompt("Nota1");
+const nota2bimtxt = prompt("Nota2");
+const turma = prompt("turma");
+const periodo = prompt("periodo");
+
+//VALIDAÇÃO
+//TRATAMENTO DE DADOS
+const nota1 = Number (nota1bimtxt);
+const nota2 = Number (nota2bimtxt);
+const somarnotas = (nota1+nota2);
+const media = (somarnotas / 2);
+
+let aluno = {
+    "Nome": nome,
+    "Nota1bim": nota1bimtxt,
+    "Nota2bim": nota2bimtxt,
+    "Turma": turma,
+    "Periodo": periodo,
+    "Aprovado": true,
+    "Média": media
+};
+
+console.log(aluno);
+
+/*
+CRIAR ATRIBUTOS PARA ARMAZENAR
+TURMA, PERIODO E MÉDIA
+MOSTRAR NA TELA ESSAS INFORMAÇÕES
+*/
+
+
+}
+
+
+function BuscarAlunos(){
+    axios.get('/alunos.json')
+  .then(function (response) {
+        // manipula o sucesso da requisição
+         //console.log(response.data[i]);
+        const alunos = response.data;
+        
+        //FOR (INICIO; CONDICAO; INCREMENTO)
+        for(let i = 0;i<response.data.length;i++){
+            console.log(alunos[i].nome);
+         }   
+
+         //forEach (PARA CADA ITEM DE "ALUNOS" FAÇA ISSO)
+        console.log("--forEach");
+         alunos.forEach(aluno => {
+            console.log(aluno.nome);
+            CO
+         });
+           
+            
+
+            
+        /*
+        MOSTAR NOME DO ALUNO E A MÉDIA
+        */
+  })
+  .catch(function (error) {
+        // manipula erros da requisição
+         console.error(error);
+  });
+}
+
+function BuscarCep(){
+    
+    const inputCep = document.querySelector("#txtCep");
+    const inputCidade = document.querySelector("#txtCidade");
+    const inputBairro = document.querySelector("#txtBairro");
+    const inputEstado = document.querySelector("#txtEstado");
+    const inputUF = document.querySelector("#txtUF");
+    
+    const cep = inputCep.value;
+     axios.get(`https://brasilapi.com.br/api/cep/v2/${CEP}`)
+  .then(function (response) {
+            console.log(response.data);
+         
+        
+            inputCidade.value = response.data.city;
+            inputBairro.value = response.data.neighborhood;
+            inputEstado.value = response.data.state;
+            inputUF.value = response.data.street;
+        })
+  .catch(function (error) {
+         console.error(error);
+  })
+
+
+}
+----------------------------------------------------------------------
